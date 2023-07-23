@@ -31,7 +31,7 @@ public class WhatsappRepository {
 
     public String createUser(String name, String mobile) throws Exception {
         if(userMobile.contains(mobile)){
-            throw new RuntimeException("user already exist");
+            throw new RuntimeException("User already exists");
         }
 
         userMobile.add(mobile);
@@ -45,7 +45,7 @@ public class WhatsappRepository {
         }
         else{
             customGroupCount++;
-            groupName = "Group"+customGroupCount;
+            groupName = "Group "+customGroupCount;
         }
 
         Group newGroup = new Group();
