@@ -48,9 +48,9 @@ public class WhatsappRepository {
             groupName = "Group "+customGroupCount;
         }
 
-        Group newGroup = new Group();
+        Group newGroup = new Group(groupName,customGroupCount);
         newGroup.setName(groupName);
-        newGroup.setNumberOfParticipants(customGroupCount);
+        newGroup.setNumberOfParticipants(users.size());
 
 
         groupUserMap.put(newGroup,users);
